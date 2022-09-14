@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="../css/Dashboard.css"></head>
+
+    <!-- font : Passion One -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap"
+        rel="stylesheet">
+
+    <!-- font : Poppins -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Passion+One&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+
+    <!-- Font-Awesome Icons -->
+    <script src="https://kit.fontawesome.com/eae712faa2.js"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous">
+    <body>
+        <!-- The sidebar -->
+        <div class="sidebar">
+
+            <a class="logo" href="./Dashboard.html">LifeFile</a>
+            <a href="./Dashboard.html">Dashboard</a>
+            <a class="active" href="./RecentPateints.html">Recent Patients</a>
+            <a href="./Erx.html">eRx</a>
+            <a href="./OrderStatus.html">Order Status</a>
+        </div>
+
+        <!-- Page content -->
+        <div class="content">
+
+            <ul class="nav-ul">
+                <h2 class="nav-heading">Recent Patients</h2>
+                <div class="nav-logout">
+                    <a class="nav-a" href="#about">Logout</a>
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </div>
+            </ul>
+
+            <section>
+                <div class="erx-title">Search Patient</div>
+                <div class="d-flex justify-content-center">
+                    <div class="d-flex flex-column justify-content-center
+                        Rc-content">
+                        <div class="erx-input">
+                            <!-- <label for="name">Search</label> -->
+                            <br>
+                            <input id="rc-search" type="text" style="width:
+                                100%"
+                                placeholder="Search Patient ">
+                            <div class="Rc-btn">
+                                <button class="button">Search</button>
+                                <button class="button">Recent</button>
+                                <button class="button">New Patient</button>
+                            </div>
+                        </div>
+                        <div class="erx-input ">
+                            <div class="justify-content-center d-flex">
+                                <div class="d-flex m-1 Rc-radio">
+                                    <input type="radio" name="Patient"
+                                        onclick="dob()">
+                                    <label for="">Last , First Name </label>
+                                    <input type="radio" name="Patient" id="dob"
+                                        onclick="dob()">
+                                    <label for="">Date of Birth </label>
+                                </div>
+                                <div class="d-flex m-1 Rc-radio">
+                                    <input type="radio" name="Patient"
+                                        onclick="dob()">
+                                    <label for="">Order Number </label>
+                                    <input type="radio" name="Patient"
+                                        onclick="dob()">
+                                    <label for="">Rx Number</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="erx-title">Search Patient</div> -->
+                <table id="table" border="1" cellspacing="0" cellpadding="1"
+                    cellspacing-between="table" class="OrderTable">
+                    <thead>
+                        <th colspan="15" class="T-head">Recently Selected
+                            Patients</th>
+                    </thead>
+                    <thead>
+                        <tr class="T-head1">
+                            <th>Selected</th>
+                            <th>Person ID</th>
+                            <th>Last Name</th>
+                            <th>First Name</th>
+                            <th>Date Of Birth</th>
+                            <th>Pet Name</th>
+                            <th>Search Location</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>09/10/2022</td>
+                            <td>205651217</td>
+                            <td>Cochran</td>
+                            <td>Whitney</td>
+                            <td>01/19/1975</td>
+                            <td></td>
+                            <td>Life-File</td>
+                            <td><button class="button Rc-button">Select</button></td>
+                        </tr>
+                        <tr>
+                            <td>09/10/2022</td>
+                            <td>205651217</td>
+                            <td>Cochran</td>
+                            <td>Whitney</td>
+                            <td>01/19/1975</td>
+                            <td>hubby</td>
+                            <td>Life-File</td>
+                            <td><button class="button Rc-button">Select</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+
+        </div>
+        <script>
+
+            function dob(){
+            if(document.getElementById('dob').checked){
+                document.getElementById('rc-search').type = 'date';
+            }
+            else{
+                console.log("not pleased");
+                document.getElementById('rc-search').type = 'text';
+            }
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="../css/Dashboard.css"></head>
+
+    <!-- font : Passion One -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap"
+        rel="stylesheet">
+
+    <!-- font : Poppins -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Passion+One&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+
+    <!-- Font-Awesome Icons -->
+    <script src="https://kit.fontawesome.com/eae712faa2.js"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous">
+
+    <body onload="GFG_FUN()">
+        <!-- The sidebar -->
+        <div class="sidebar">
+
+            <a class="logo" href="./Dashboard.html">LifeFile</a>
+            <a href="./Dashboard.html">Dashboard</a>
+            <a href="./RecentPateints.html">Recent Patients</a>
+            <a href="./Erx.html">eRx</a>
+            <a class="active" href="./OrderStatus.html">Order Status</a>
+        </div>
+
+        <!-- Page content -->
+        <div class="content">
+
+            <ul class="nav-ul">
+                <h2 class="nav-heading">Order Status</h2>
+                <div class="nav-logout">
+                    <a class="nav-a" href="#about">Logout</a>
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </div>
+            </ul>
+
+            <section>
+                <form action="/html/Dashboard.html" style="width: 100%">
+                    <div class="form-wrapper">
+                        <div class="Order-form">
+                            <div>
+                                <label for="Created from">Created from:</label>
+                                <input type="date" id="Cfrom">
+                            </div>
+                            <div>
+                                <label for="Created to">Created to:</label>
+                                <input type="date" id="Cto">
+                            </div>
+                            <div>
+                                <label for="Created to">Patient Name: </label>
+                                <input type="text" id="Pname"
+                                    placeholder="(Last, First)">
+                            </div>
+
+                            <div>
+                                <label for="Created to">Order #:</label>
+                                <input type="text" id="ONum">
+                            </div>
+
+                            <div>
+                                <label for="Created to">Rx #:</label>
+                                <input type="text" id="Rx">
+                            </div>
+
+                            <div>
+                                <label for="Created to">
+                                    Provider Name :</label>
+                                <input type="text" id="PrName"
+                                    placeholder="(Last, First)">
+                            </div>
+
+                            <button class="button">Search</button>
+
+                            <button class="button">Clear Filters</button>
+
+                        </div>
+                        <div class="Order-form">
+                            <div>
+                                <label for="Created to">User Name:</label>
+                                <input type="text" id="UName">
+                            </div>
+
+                            <div>
+                                <label for="Status">Order Status</label>
+                                <select id="status" name="status">
+                                    <option value="">-- Choose one --</option>
+                                    <option value="canada">Awaiting
+                                        Clarification</option>
+                                    <option value="usa">Awaiting Response from
+                                        Patient</option>
+                                    <option value="">Clarification Required</option>
+                                    <option value="">Completed Forms</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- ------------------Table----------------->
+                <table id="table" border="1" cellspacing="0" cellpadding="1"
+                    cellspacing-between="table" class="OrderTable">
+                    <thead>
+                        <th colspan="15" class="T-head">Order Status</th>
+                    </thead>
+                    <thead>
+                        <tr class="T-head1">
+                            <th>Date Time</th>
+                            <th>Order#</th>
+                            <th>Order Status</th>
+                            <th>Source</th>
+                            <th>Priority</th>
+                            <th>EPCs</th>
+                            <th>Provider</th>
+                            <th>Patient</th>
+                            <th>DOB</th>
+                            <th>Medication</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>09/07/2022 06:08:30 PM</td>
+                            <td>62304931</td>
+                            <td>Order Complete</td>
+                            <td>serx</td>
+                            <td>Normal</td>
+                            <td>Yes</td>
+                            <td>Hill, James</td>
+                            <td>Monk, Stephen</td>
+                            <td>12/24/1977</td>
+                            <td>
+                                <table border="1" cellspacing="0"
+                                    cellpadding="1" cellspacing-between="table"
+                                    class="Inner-table">
+                                    <tr class="T-head2">
+                                        <th>Rx#</th>
+                                        <th>Drug Name</th>
+                                        <th>Qty</th>
+                                        <th>Tracking Info</th>
+                                    </tr>
+                                    <tr>
+                                        <td>60647166</td>
+                                        <td>PHENTERMINE HCL 37.5 MG TABLET</td>
+                                        <td>30</td>
+                                        <td>UPS: <br> <a href="#UPS:">1ZE3V5760194572328</a></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td><a href="#actions">View Doc</a></td>
+                        </tr>
+                        <tr>
+                            <td>09/07/2022 06:08:30 PM</td>
+                            <td>62304931</td>
+                            <td>Order Complete</td>
+                            <td>serx</td>
+                            <td>Normal</td>
+                            <td>Yes</td>
+                            <td>Hill, James</td>
+                            <td>Monk, Stephen</td>
+                            <td>12/24/1977</td>
+                            <td class="Inner_table">
+                                <table border="1" cellspacing="0"
+                                    cellpadding="1" cellspacing-between="table"
+                                    class="Inner-table">
+                                    <tr class="T-head2">
+                                        <th>Rx#</th>
+                                        <th>Drug Name</th>
+                                        <th>Qty</th>
+                                        <th>Tracking Info</th>
+                                    </tr>
+                                    <tr>
+                                        <td>60647166</td>
+                                        <td>PHENTERMINE HCL 37.5 MG TABLET</td>
+                                        <td>30</td>
+                                        <td>UPS: <br> <a href="#UPS:">1ZE3V5760194572328</a></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td><a href="#actions">View Doc</a></td>
+                        </tr>
+                        <tr>
+                            <td>09/07/2022 06:08:30 PM</td>
+                            <td>62304931</td>
+                            <td>Order Complete</td>
+                            <td>serx</td>
+                            <td>Normal</td>
+                            <td>Yes</td>
+                            <td>Hill, James</td>
+                            <td>Monk, Stephen</td>
+                            <td>12/24/1977</td>
+                            <td>
+                                <table border="1" cellspacing="0"
+                                    cellpadding="1" cellspacing-between="table"
+                                    class="Inner-table">
+                                    <tr class="T-head2">
+                                        <th>Rx#</th>
+                                        <th>Drug Name</th>
+                                        <th>Qty</th>
+                                        <th>Tracking Info</th>
+                                    </tr>
+                                    <tr>
+                                        <td>60647166</td>
+                                        <td>PHENTERMINE HCL 37.5 MG TABLET</td>
+                                        <td>30</td>
+                                        <td>UPS: <br> <a href="#UPS:">1ZE3V5760194572328</a></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td><a href="#actions">View Doc</a></td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+
+                <!-- <script>
+
+            mydata = {
+                "date": 
+            }
+            data = {
+            "tennis": [{
+                "Description": "Insert description here.",
+                "Price": 379.99,
+                "ProductName": "Babolat Play Pure Drive",
+            }, {
+                "Description": "Insert description here.",
+                "Price": 199.99,
+                "ProductName": "Yonex AI 98 Tennis Racquet",
+            }],
+            "basketball": [{
+                "Description": "Insert description here.",
+                "Price": 64.99,
+                "ProductName": "Wilson NCAA Solution Official Game Basketball",
+            }, {
+                "Description": "Insert description here.",
+                "Price": 59.99,
+                "ProductName": "Spalding NBA NeverFlat Size 7 Composite Leather Basketball",
+            }]
+            }
+
+
+            for (var key in data) {
+                for (var i = 0; i < data[key].length; i++) {
+                    var title = data[key][i].ProductName;
+                    var desc = data[key][i].Description;
+                    var price = data[key][i].Price;
+                    var badge = document.createElement('table');
+                    badge.className = 'badge';
+                    badge.innerHTML =
+                    '<td>' + title + '</td>' +
+                    '<td>' + desc + '</h1>' +
+                    '<td class="options-only-phone">' +
+                    '<td class="service-provider-call" href="#" target="_blank"> Buy for $' + price + '</td>';
+                    document.getElementById(key).appendChild(badge);
+                    badge.style.border = "1px solid black";
+                }
+            }
+
+
+
+
+
+		// var el_up = document.getElementById("GFG_UP");
+		
+		// var list = [
+		// 	{"col_1":"val_11", "col_2":"val_12", "col_3":"val_13"},
+		// 	{"col_1":"val_21", "col_2":"val_22", "col_3":"val_23"},
+		// 	{"col_1":"val_31", "col_2":"val_32", "col_3":"val_33"}
+		// ];
+		
+		// el_up.innerHTML = "Click on the button to create the "
+		// 		+ "table from the JSON data.<br><br>"
+		// 		+ JSON.stringify(list[0]) + "<br>"
+		// 		+ JSON.stringify(list[1]) + "<br>"
+		// 		+ JSON.stringify(list[2]);
+		
+		// function GFG_FUN() {
+		// 	var cols = [];
+			
+		// 	for (var i = 0; i < list.length; i++) {
+		// 		for (var k in list[i]) {
+		// 			if (cols.indexOf(k) === -1) {
+						
+		// 				// Push all keys to the array
+		// 				cols.push(k);
+		// 			}
+		// 		}
+		// 	}
+			
+		// 	// Create a table element
+		// 	var table = document.getElementById("table");
+			
+		// 	// Create table row tr element of a table
+		// 	var tr = table.insertRow(-1);
+			
+		// 	// for (var i = 0; i < cols.length; i++) {
+				
+		// 	// 	// Create the table header th element
+		// 	// 	var theader = document.createElement("th");
+		// 	// 	theader.innerHTML = cols[i];
+				
+		// 	// 	// Append columnName to the table row
+		// 	// 	tr.appendChild(theader);
+		// 	// }
+			
+		// 	// Adding the data to the table
+		// 	for (var i = 0; i < list.length; i++) {
+				
+		// 		// Create a new row
+		// 		trow = table.insertRow(-1);
+		// 		for (var j = 0; j < cols.length; j++) {
+		// 			var cell = trow.insertCell(-1);
+					
+		// 			// Inserting the cell at particular place
+		// 			cell.innerHTML = list[i][cols[j]];
+		// 		}
+		// 	}
+			
+		// 	// Add the newly created table containing json data
+		// 	var el = document.getElementById("table");
+		// 	el.innerHTML = "";
+		// 	el.appendChild(table);
+		// }
+	</script> -->
+            </section>
+        </div>
+    </body>
+</html>

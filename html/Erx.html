@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="../css/Dashboard.css">
+    </head>
+
+    <!-- font : Passion One -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap"
+        rel="stylesheet">
+
+    <!-- font : Poppins -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Passion+One&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+
+    <!-- Font-Awesome Icons -->
+    <script src="https://kit.fontawesome.com/eae712faa2.js"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous">
+
+    <body>
+        <!-- The sidebar -->
+        <div class="sidebar">
+
+            <a class="logo" href="./Dashboard.html">LifeFile</a>
+            <a href="./Dashboard.html">Dashboard</a>
+            <a href="./RecentPateints.html">Recent Patients</a>
+            <a class="active" href="./Erx.html">eRx</a>
+            <a href="./OrderStatus.html">Order Status</a>
+        </div>
+
+        <!-- Page content -->
+        <div class="content">
+
+            <ul class="nav-ul">
+                <h2 class="nav-heading">eRx Order Information</h2>
+                <div class="nav-logout">
+                    <a class="nav-a" href="#about">Logout</a>
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </div>
+            </ul>
+
+            <section>
+                <div class="erx-btn">
+                    <button class="button">Cancel</button>
+                </div>
+                <div class="erx-title">Order Processing Information</div>
+                <div class="erx-content">
+                    <div>
+                        <h6>* Process Priority</h6>
+                        <div>
+                            <input type="radio" name="process-priority">
+                            <label for="Normal">Normal</label>
+                            <input type="radio" name="process-priority">
+                            <label for="Urgent">Urgent</label>
+                            <input type="radio" name="process-priority">
+                            <label for="STAT">STAT</label>
+                            <input type="radio" name="process-priority">
+                            <label for="Low">Low</label>
+                        </div>
+                        <div class="erx-select">
+                            <label for="Status">Delivery Information</label>
+                            <select id="status" name="status">
+                                <option value="">-- Choose one --</option>
+                                <option value="canada">Awaiting Clarification</option>
+                                <option value="usa">Awaiting Response from
+                                    Patient</option>
+                                <option value="">Clarification Required</option>
+                                <option value="">Completed Forms</option>
+                            </select>
+                        </div>
+                        <div class="erx-select">
+                            <label for="Status">Order Status</label>
+                            <select id="status" name="status">
+                                <option value="">-- Choose one --</option>
+                                <option value="canada">Awaiting Clarification</option>
+                                <option value="usa">Awaiting Response from
+                                    Patient</option>
+                                <option value="">Clarification Required</option>
+                                <option value="">Completed Forms</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="erx-content-right">
+                        <label for="">Special Instructions</label>
+                        <textarea name="" id="" cols="50" rows="5"></textarea>
+                        <label for="">Send Universal Claim Form to Patient</label>
+                        <input type="checkbox" name="check">
+
+                    </div>
+                </div>
+
+                <!-- ----2---- -->
+
+                <div class="erx-title">Patient Information</div>
+                <div class="erx-content">
+                    <div class="d-flex flex-column">
+                        <div class="erx-input">
+                            <label for="name">*First Name</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">Middle Name</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">*Last Name</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">*Date of Birth</label>
+                            <input type="date">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">Gender</label>
+                            <div>
+                                <input type="radio">
+                                <label for="">Female</label>
+                                <input type="radio">
+                                <label for="">Male</label>
+                                <input type="radio">
+                                <label for="">Animal</label>
+                                <input type="radio">
+                                <label for="">Unknown</label>
+                            </div>
+                        </div>
+                        <div class="erx-select">
+                            <label for="Status">Identification Type</label>
+                            <select id="status" name="status">
+                                <option value="">-- Choose one --</option>
+                                <option value="canada">Driving License centre</option>
+                                <option value="usa">Awaiting Response from
+                                    Patient</option>
+                                <option value="">Clarification Required</option>
+                                <option value="">Completed Forms</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <div class="erx-input">
+                            <label for="name">Address 1</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">Address 2</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">City</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-select">
+                            <label for="Status">Species</label>
+                            <select id="status" name="status">
+                                <option value="">-- Choose one --</option>
+                                <option value="canada">Driving License centre</option>
+                                <option value="usa">Awaiting Response from
+                                    Patient</option>
+                                <option value="">Clarification Required</option>
+                                <option value="">Completed Forms</option>
+                            </select>
+                        </div>
+                        <div class="erx-select">
+                            <label for="Status">State</label>
+                            <select id="status" name="status">
+                                <option value="">-- Choose one --</option>
+                                <option value="canada">Driving License centre</option>
+                                <option value="usa">Awaiting Response from
+                                    Patient</option>
+                                <option value="">Clarification Required</option>
+                                <option value="">Completed Forms</option>
+                            </select>
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">Identification Number</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <div class="erx-input">
+                            <label for="name">Zip</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">
+                                <strong>*Phone</strong>
+                            </label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">Cell Phone</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">Pet Name</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">Email</label>
+                            <input type="email">
+                        </div>
+                        <div class="erx-select">
+                            <label for="Status">Driver's License State</label>
+                            <select id="status" name="status">
+                                <option value="">-- Choose one --</option>
+                                <option value="canada">Driving License centre</option>
+                                <option value="usa">Awaiting Response from
+                                    Patient</option>
+                                <option value="">Clarification Required</option>
+                                <option value="">Completed Forms</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!------3---- -->
+                <div class="erx-title">Delivery/Shipping Information</div>
+                <div class='erx-buttons'>
+                    <button class="button">Copy Patient Information</button>
+                    <button class="button">Copy Doctor Information</button>
+                    <button class="button">Patient Shipping Preferences</button>
+                </div>
+                <div class="erx-content">
+                    <div class="d-flex flex-column">
+                        <div class="erx-select">
+                            <label for="Status">Recipient Type</label>
+                            <select id="status" name="status">
+                                <option value="">-- Choose one --</option>
+                                <option value="canada">Driving License centre</option>
+                                <option value="usa">Awaiting Response from
+                                    Patient</option>
+                                <option value="">Clarification Required</option>
+                                <option value="">Completed Forms</option>
+                            </select>
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">*Last Name</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">Address</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">Email</label>
+                            <input type="email">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">City</label>
+                            <input type="email">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">Attention</label>
+                            <input type="email">
+                        </div>
+
+                        <div class="erx-select">
+                            <label for="Status">Signature Type</label>
+                            <select id="status" name="status">
+                                <option value="">-- Choose one --</option>
+                                <option value="canada">Driving License centre</option>
+                                <option value="usa">Awaiting Response from
+                                    Patient</option>
+                                <option value="">Clarification Required</option>
+                                <option value="">Completed Forms</option>
+                            </select>
+                        </div>
+                        <div class="erx-input">
+                            <label for="">Shipper Release</label>
+                            <input type="checkbox" id="shipper">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <div class="erx-input">
+                            <label for="name">First Name</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">Address (cont)</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-input">
+                            <label for="">
+                                Carrier Email Notification(s)</label>
+                            <input type="checkbox" id="shipper">
+                        </div>
+                        <div class="erx-select">
+                            <label for="Status">State</label>
+                            <select id="status" name="status">
+                                <option value="">-- Choose one --</option>
+                                <option value="canada">Driving License centre</option>
+                                <option value="usa">Awaiting Response from
+                                    Patient</option>
+                                <option value="">Clarification Required</option>
+                                <option value="">Completed Forms</option>
+                            </select>
+                        </div>
+                        <div class="erx-select">
+                            <label for="Status">Delivery Service</label>
+                            <select id="status" name="status">
+                                <option value="">-- Choose one --</option>
+                                <option value="canada">Driving License centre</option>
+                                <option value="usa">Awaiting Response from
+                                    Patient</option>
+                                <option value="">Clarification Required</option>
+                                <option value="">Completed Forms</option>
+                            </select>
+                        </div>
+                        <div class="erx-select">
+                            <label for="Status">Residential Address Indicator</label>
+                            <select id="status" name="status">
+                                <option value="">-- Choose one --</option>
+                                <option value="canada">Driving License centre</option>
+                                <option value="usa">Awaiting Response from
+                                    Patient</option>
+                                <option value="">Clarification Required</option>
+                                <option value="">Completed Forms</option>
+                            </select>
+                        </div>
+                        <div class="erx-input">
+                            <label for="">
+                                Save Shipping Preference</label>
+                            <input type="checkbox" id="shipper">
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <div class="erx-input">
+                            <label for="name"><strong>*Phone</strong></label>
+                            <input type="text">
+                        </div>
+
+                        <div class="erx-input">
+                            <label for="name">Address (cont)</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-select">
+                            <label for="Status">Country</label>
+                            <select id="status" name="status">
+                                <option value="">-- Choose one --</option>
+                                <option value="canada">Driving License centre</option>
+                                <option value="usa">Awaiting Response from
+                                    Patient</option>
+                                <option value="">Clarification Required</option>
+                                <option value="">Completed Forms</option>
+                            </select>
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">Zip</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">Delivery Date</label>
+                            <input type="date">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">
+                                Shipment Insurance Amount</label>
+                            <input type="text">
+                        </div>
+
+                    </div>
+                </div>
+                <!-- --------------4---------------------- -->
+
+                <div class="erx-title">Allergies - Diagnosis/Problems
+                    Information</div>
+                <div class="erx-content">
+                    <div class="d-flex flex-column">
+                        <div class="erx-input">
+                            <label for="">Check here if there are no allergies</label>
+                            <input type="checkbox" id="shipper">
+                        </div>
+
+
+                        <div class="erx-input">
+                            <label for="name">Allergies (Name/Code)</label>
+                            <div class="dignose-btn">
+                                <input type="text" id="dignose-1" required>
+                                <input type="text">
+                                <button class="button p-1" onclick="add_inp()"><i
+                                        class="fa-solid fa-plus"></i></button>
+                                <button class="button p-1" onclick="rem_inp()"><i
+                                        class="fa-solid fa-minus"></i></button>
+                                <button class="button p-1"><i class="fa-solid
+                                        fa-magnifying-glass"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column">
+                        <div class="erx-input">
+                            <label for="">Check here if there are no diagnosis</label>
+                            <input type="checkbox" id="shipper">
+                        </div>
+
+
+                        <div class="erx-input " id="dignose">
+                            <label for="name">Diagnosis/Problems (Name/Code)</label>
+                            <div class="dignose-btn">
+                                <input type="text" id="dignose-1" required>
+                                <input type="text">
+                                <button class="button p-1" onclick="add_inp()"><i
+                                        class="fa-solid fa-plus"></i></button>
+                                <button class="button p-1" onclick="rem_inp()"><i
+                                        class="fa-solid fa-minus"></i></button>
+                                <button class="button p-1">more</button>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ------------5------------- -->
+                <div class="erx-title">Payment Information</div>
+
+                <div class="erx-content">
+                    <div class="d-flex flex-column">
+                        <div class="erx-select">
+                            <label for="Status">Payor</label>
+                            <select id="status" name="status">
+                                <option value="">-- Choose one --</option>
+                                <option value="canada">Driving License centre</option>
+                                <option value="usa">Awaiting Response from
+                                    Patient</option>
+                                <option value="">Clarification Required</option>
+                                <option value="">Completed Forms</option>
+                            </select>
+                        </div>
+                        <div class="erx-select">
+                            <label for="Status">Credit Card Type</label>
+                            <select id="status" name="status">
+                                <option value="">-- Choose one --</option>
+                                <option value="canada">Driving License centre</option>
+                                <option value="usa">Awaiting Response from
+                                    Patient</option>
+                                <option value="">Clarification Required</option>
+                                <option value="">Completed Forms</option>
+                            </select>
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">Company Name</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">Cardholder Last Name</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">Credit Card Address</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">Exp</label>
+                            <input type="date">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">Net Term</label>
+                            <input type="text">
+                        </div>
+
+                    </div>
+                    <div class="d-flex flex-column">
+                        <div class="erx-input">
+                            <label for="name">Credit Card Number</label>
+                            <input type="text">
+                        </div>
+                        <br><br><br>
+                        <div class="erx-input">
+                            <label for="name">Cardholder M.I.</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">Email</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-select">
+                            <label for="Status">Credit Card State</label>
+                            <select id="status" name="status">
+                                <option value="">-- Choose one --</option>
+                                <option value="canada">Driving License centre</option>
+                                <option value="usa">Awaiting Response from
+                                    Patient</option>
+                                <option value="">Clarification Required</option>
+                                <option value="">Completed Forms</option>
+                            </select>
+                        </div>
+                        <div class="erx-input">
+                            <label for="">HSA/FSA Card</label>
+                            <input type="checkbox" id="shipper">
+                        </div>
+
+
+                    </div>
+                    <div class="d-flex flex-column justify-content-center">
+                        <div class="erx-input mb-5">
+                            <label for="name">
+                                Cardholder First Name</label>
+                            <input type="text">
+                        </div>
+                        <div class="erx-input">
+                            <label for="name">
+                                Credit Card Zip
+                            </label>
+                            <input type="text">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="erx-btn mb-5">
+                    <button class="button">Cancel</button>
+                </div>
+            </section>
+
+
+        </div>
+        <script>
+        function add_inp() {
+            let dignose1 = document.getElementById('dignose-1').value;
+            if (dignose1 === '') {
+                alert('Add a diagnosis/problem first');
+            }
+            else {
+                document.getElementById("dignose").innerHTML +=
+                    "<div id='dignoseC'><input type='text' ><input type='text' style='margin-left: 5px; margin-bottom: 5px;'></div>";
+            }
+        }
+
+        function rem_inp() {
+            document.getElementById('dignose').removeChild(document.getElementById('dignoseC'));
+
+        }
+    </script>
+    </body>
+
+</html>
